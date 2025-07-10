@@ -11,6 +11,7 @@ def get_random_word():
 
 
 def display_game_state(mistakes, secret_word, guessed_letters):
+    """Displays the game state."""
     # Display the snowman stage for the current number of mistakes.
     print(STAGES[min(mistakes, len(STAGES) - 1)])
     # Build a display version of the secret word.
@@ -21,10 +22,10 @@ def display_game_state(mistakes, secret_word, guessed_letters):
         else:
             display_word += "_ "
     print("Word: ", display_word)
-    # print("\n")
 
 
 def play_game():
+    """Game logic."""
     secret_word = get_random_word()
     guessed_letters = []
     mistakes = 0
@@ -41,16 +42,6 @@ def play_game():
             print("Please enter only letters and a single Letter.")
             continue
 
-        # GANZES WORT geraten?
-        # if len(guess) > 1:
-        # if guess == secret_word:
-        # rint("Amazing! You guessed the word!")
-        # print("You saved the snowman!")
-        # break
-        # else:
-        # mistakes += 1
-        # print("Wrong word!")
-        # display_game_state(mistakes, secret_word, guessed_letters)
         else:
             # EIN BUCHSTABE geraten
             if guess in guessed_letters:
