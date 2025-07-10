@@ -83,5 +83,4 @@ def play_game():
         print("Thanks for playing. Goodbye!")
 
 
-if __name__ == "__main__":
-    play_game()
+
